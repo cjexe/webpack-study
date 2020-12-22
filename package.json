@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cjexe/webpack-study/issues"
   },
-  "homepage": "https://github.com/cjexe/webpack-study#readme"
+  "homepage": "https://github.com/cjexe/webpack-study#readme",
+  "devDependencies": {
+    "webpack": "^5.11.0"
+  }
 }
