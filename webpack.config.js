@@ -1,4 +1,5 @@
 const path = require('path')
+const htmlWebpackPlugin = require('html-webpack-plugin')
 const config = {
     entry: './index.js',
     output: {
@@ -7,10 +8,13 @@ const config = {
     },
     module: {
         rules: [
-            {test: '/\.txt$/', use: 'raw-loader'}
+            {test: '/\.txt$/', use: 'raw-loader'},
+            {test: '/\.css$/', use: 'css-loader'}
 
         ]
     },
-    plugins: []
+    plugins: [
+        new htmlWebpackPlugin()
+    ]
 }
 module.exports = config
