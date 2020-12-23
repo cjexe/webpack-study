@@ -8,8 +8,13 @@ const config = {
     },
     module: {
         rules: [
-            {test: '/\.txt$/', use: 'raw-loader'},
-            {test: '/\.css$/', use: 'css-loader'}
+            {
+                test: /\.css$/,
+                use: [
+                    {loader: "style-loader"},
+                    {loader: "css-loader"}
+                ]
+            },
 
         ]
     },
